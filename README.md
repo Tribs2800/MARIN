@@ -88,7 +88,7 @@ PATH_SUFFIXES include/wels codec/api/wels
 
 Next, using CMake (3.23.1), configure the *OpenIGTLink* project with Xcode as the generator and with video streaming and H264 enabled: ** 
 
-![plot](https://github.com/Tribs2800/MARIN/edit/master/README_images/fig1.png)
+![fig1](https://github.com/Tribs2800/MARIN/assets/58409651/97f462da-6d24-46b3-a0ce-902db49fbe5b)
 
 Be sure that the *OpenH264_INCLUDE_DIR* is pointing to the *wels* folder rather than the outdated *svc* folder. Then, within the *../nist/OpenIGTLink-build* directory, clone the openh264 repository and build it by executing the following commands:   
 
@@ -133,15 +133,15 @@ Now, back in CMake, configure once again and generate the *OpenIGTLink* project.
 
 as subprojects by dragging the files in the left pane under the *OpenIGTLink* project. Your Xcode window should look like this:
 
-![Screen Shot 2022-06-24 at 2.32.05 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/75cfd01a-4f07-453f-8a7d-e6569bbab6e8/Screen_Shot_2022-06-24_at_2.32.05_PM.png)
+![fig2](https://github.com/Tribs2800/MARIN/assets/58409651/d8ed8d45-a99f-4942-a8d5-5c0a79274515)
 
 Next, add the subprojects as target dependencies in the *Build Phases* of the ***OpenIGTLink* target** which you must select from the drop down menu in the main pane:
 
-![Screen Shot 2022-06-24 at 2.33.19 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1fa05e17-3c22-4e42-8f8e-ac0f6475a0c6/Screen_Shot_2022-06-24_at_2.33.19_PM.png)
+![fig3](https://github.com/Tribs2800/MARIN/assets/58409651/5deb38f5-bc42-41ef-abb0-7c954abb03f8)
 
 Then, for the *OpenIGTLink*, *common*, *welsdec*, *welsenc*, *openh264*, **and *processing* projects and targets, change *Targeted Device Families* to iPad (with code number 2) and the *iOS Deployment Target* to the iOS version of your iPad (e.g. iOS 15.5) under *Build Settings → Deployment*:
 
-![Screen Shot 2022-06-24 at 2.40.01 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff63aa79-1b40-45a8-8483-e277a5910926/Screen_Shot_2022-06-24_at_2.40.01_PM.png)
+![fig4](https://github.com/Tribs2800/MARIN/assets/58409651/9d96a04b-06cb-47ac-842f-7cd375d51809)
 
 Next,
 
@@ -174,7 +174,7 @@ vim .gclient # or text editor of choice
 
 Add “; target_os=[’ios’];” to the end of .gclient as follows:
 
-![Screen Shot 2022-06-29 at 1.04.55 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8b22260-ae3b-4796-b4a5-2f16972f7990/Screen_Shot_2022-06-29_at_1.04.55_PM.png)
+![fig5](https://github.com/Tribs2800/MARIN/assets/58409651/f48e771a-067d-4cc3-83f7-c5977e687c11)
 
 Then, install Python on your system, run ../*Applications/Python X.X/Install Certificates.command* and execute the following:
 
@@ -299,11 +299,11 @@ Open the *../nist/MARIN/MARIN.xcodeproj* Xcode project file and select the *MARI
 
 Next, open the *../nist/MARIN/MARIN.xcodeproj* Xcode project file and select the **MARIN project** in the project navigator (left pane). Under *Build Settings → Architectures,* change the *Base SDK* to *iOS* and change all architectures to to *Standard Architectures*. Apply these same settings to the **MARIN target**. Then, plug your iPad device and ensure that you are building the *MARIN* project on your iPad (c.f. top window of the main pane in the next figure which should read *MARIN* > Your iPad).
 
-![Screen Shot 2022-07-04 at 2.22.16 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eface83f-eab4-4b72-b25e-08d2a540b846/Screen_Shot_2022-07-04_at_2.22.16_PM.png)
+![fig6](https://github.com/Tribs2800/MARIN/assets/58409651/1e992f86-1e75-442f-8c72-c303a9ee2425)
 
 Then, to the *MARIN* project, change *Targeted Device Families* to iPad (with code number 2) and the *iOS Deployment Target* to the iOS version of your iPad (e.g. iOS 15.5) under *Build Settings → Deployment.*
 
-![Screen Shot 2022-07-04 at 2.24.24 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7582fc0-cf40-4129-b483-a5ec8abd96c1/Screen_Shot_2022-07-04_at_2.24.24_PM.png)
+![fig7](https://github.com/Tribs2800/MARIN/assets/58409651/55407fef-bee9-4f64-8db3-226e33857fd7)
 
 Also to the *MARIN* project, change Build Settings → Build Options → Enable Bitcode to *No*. Make sure that these changes also take effect on the *MARIN* target. 
 
@@ -334,8 +334,9 @@ Next, set the desired network and mobile device parameters in the *configs* fold
 
 In the Xcode interface, click on the hammer icon in the center pane (c.f. figure below) and change *Legacy Build System (Deprecated)* to *New Build System (Default).* 
 
-![Screen Shot 2022-07-06 at 12.28.07 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f2023df7-61fe-49b6-8e45-a888b865404d/Screen_Shot_2022-07-06_at_12.28.07_PM.png)
+<img width="382" alt="fig8" src="https://github.com/Tribs2800/MARIN/assets/58409651/093030a5-0910-41b0-9d7f-2b7c5895ec7e">
 
-![Screen Shot 2022-07-06 at 12.29.59 PM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/615e2771-2703-4f68-8727-8f500ef52ece/Screen_Shot_2022-07-06_at_12.29.59_PM.png)
+![fig9](https://github.com/Tribs2800/MARIN/assets/58409651/42af3490-fde7-4257-985e-c485ffe7c54a)
+
 
 Finally, validate the project settings of MARIN in the *Issues Navigator* (default left pane), wait for Xcode to process all files (c.f. message left of hammer on the figure above) and select *Product→Build* from the Xcode interface. If Xcode complains about not being able to find certain files in MARIN/ which exists in that directory, proceed by selecting *Product→Clean Build Folder* in the Xcode interface and re-run *Product→Build*.
