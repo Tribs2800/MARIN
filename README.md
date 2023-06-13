@@ -51,9 +51,7 @@ Then copy all created .a to the corresponding locations in the MARIN lib folder
 ### Thomas build instructions:
 Below is a step-by-step guide for compiling MARIN on an iPad Pro (12.9-inch) (5th generation) using Xcode 13.4 on a MacBook Pro (13-inch, 2017): 
 
-# Compiling Marin dependencies
-
-### OpenIGTLink + OpenH264
+#### OpenIGTLink + OpenH264
 
 On a Mac with Xcode installed, clone the *OpenIGTLink* project by executing the following commands within a base directory *../nist*:
 
@@ -90,7 +88,7 @@ PATH_SUFFIXES include/wels codec/api/wels
 
 Next, using CMake (3.23.1), configure the *OpenIGTLink* project with Xcode as the generator and with video streaming and H264 enabled: ** 
 
-![Screen Shot 2022-07-06 at 11.58.20 AM.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/53c5a5d2-392e-4f96-8cc7-5652ac9ae0e9/Screen_Shot_2022-07-06_at_11.58.20_AM.png)
+![alt text](https://github.com/Tribs2800/MARIN/edit/master/README_images/fig1.png)
 
 Be sure that the *OpenH264_INCLUDE_DIR* is pointing to the *wels* folder rather than the outdated *svc* folder. Then, within the *../nist/OpenIGTLink-build* directory, clone the openh264 repository and build it by executing the following commands:   
 
@@ -159,7 +157,7 @@ Finally, validate all project settings in the *Issues Navigator* (default left p
 - *../nist/OpenIGTLink-build/Deps/openh264/codec/build/IOS/enc/welsenc/build/Debug-iphoneos/**libwelsenc.a***
 - *../nist/OpenIGTLink-build/Deps/openh264/codec/build/IOS/processing/build/Debug-iphoneos/**libprocessing.a***
 
-### Libyuv
+#### Libyuv
 
 Since I ran out of storage on my Mac, the *libyuv* source code was downloaded and built on an external hard drive. The following commands were executed within the base directory /Volumes/Expansion/ThomasMac/Documents:
 
@@ -192,7 +190,7 @@ This will create the following libraries:
 - *../Volumes/Expansion/ThomasMac/Documents/src/out/Debug/obj/**libyuv_internal.a***
 - *../Volumes/Expansion/ThomasMac/Documents/src/out/Debug/obj/**libyuv_neon.a***
 
-# Installing QT
+##### Installing QT
 
 5.14.2 ≤ Version ≤ 5.15
 
@@ -200,7 +198,7 @@ This will create the following libraries:
 
 *QT* was also downloaded and built on the external hard drive in the directory: */Volumes/Expansion/ThomasMac/Qt*
 
-# Building MARIN
+##### Building MARIN
 
 Within a base directory ../nist, clone the *MARIN* repository by **executing the following commands:
 
