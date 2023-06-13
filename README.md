@@ -88,7 +88,7 @@ PATH_SUFFIXES include/wels codec/api/wels
 
 Next, using CMake (3.23.1), configure the *OpenIGTLink* project with Xcode as the generator and with video streaming and H264 enabled: ** 
 
-![alt text](https://github.com/Tribs2800/MARIN/edit/master/README_images/fig1.png)
+![plot](https://github.com/Tribs2800/MARIN/edit/master/README_images/fig1.png)
 
 Be sure that the *OpenH264_INCLUDE_DIR* is pointing to the *wels* folder rather than the outdated *svc* folder. Then, within the *../nist/OpenIGTLink-build* directory, clone the openh264 repository and build it by executing the following commands:   
 
